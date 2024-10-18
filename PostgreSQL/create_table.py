@@ -14,13 +14,14 @@ def create_students_table():
         grade VARCHAR(10)
     );
     '''
-    cur.execute(create_table_query)
-    conn.commit()
-
-    cur.close()
-    conn.close()
+    try:
+        cur.execute(create_table_query)
+        conn.commit() # to save changes in DB 
+        print("Students table created successfully.")
+    except Exception as ex:
+        print("Could not execute query", ex)
+    finally:
+        cur.close()
+        conn.close()
     
-    print("Students table created successfully.")
-
-if __name__ == "__main__":
-    create_students_table()
+create_students_table()

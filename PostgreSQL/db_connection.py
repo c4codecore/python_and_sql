@@ -8,10 +8,19 @@ import os
 load_dotenv()
 
 def get_connection():
-    return psycopg2.connect(
-        dbname=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT")
-    )
+    try:
+        # Create and return a new database connection
+        connection = psycopg2.connect(
+            dbname=os.getenv("DB_NAME"),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT")
+        )
+        print("Connection established successfully!")
+        return connection
+    except Exception as ex:
+        print("Connection could not be created:", ex)
+
+if __name__ == "__main__":
+    con = get_connection()
