@@ -1,2 +1,5 @@
 venv/
 *.env
+*bipin.py
+*imran.py
+*manish.py
