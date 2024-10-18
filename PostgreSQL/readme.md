@@ -16,6 +16,42 @@ pip install psycopg2-binary python-dotenv
 ## Setup
 
 1. Clone or download the repository.
+
+Steps to clone a Git repository:
+
+1. **Install Git**  
+   First, ensure Git is installed on your machine. You can download it from [Git's official site](https://git-scm.com/). 
+
+2. **Navigate to the desired directory**  
+   Open your terminal (or command prompt) and navigate to the directory where you want to clone the repository:
+   ```bash
+   cd /path/to/your/directory
+   ```
+
+3. **Clone the repository**  
+   Use the following command to clone the repository:
+   ```bash
+   git clone <repository_url>
+   ```
+   For example:
+   ```bash
+   git clone https://github.com/c4codecore/python_and_sql.git
+   ```
+
+4. **Navigate into the cloned repository**  
+   After cloning, move into the repository folder:
+   ```bash
+   cd python_and_sql
+   ```
+
+5. **Optional: Set up your Git identity**  
+   If you haven’t configured Git with your username and email, you can do it now:
+   ```bash
+   git config user.name "<your_name>"
+   git config user.email "<your_email>"
+   ```
+
+
 2. Ensure that you have PostgreSQL installed and running.
 3. Create a `.env` file in your project directory with the following content:
 
