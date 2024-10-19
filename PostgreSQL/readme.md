@@ -137,3 +137,13 @@ delete_student(1)
 This project is open-source and free to use.
 
 ---
+step first -- git init
+step second --git config user.name
+step third -- git config user.email
+step fouth -- git remote add origin <url>
+step fifth -- git clone <url>
+
+after that 
+
+create python venv
+create .env file
